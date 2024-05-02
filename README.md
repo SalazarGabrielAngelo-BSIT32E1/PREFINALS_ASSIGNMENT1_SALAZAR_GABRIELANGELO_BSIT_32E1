@@ -3,17 +3,17 @@
  
 **Onion Architecture: (Yes/No) 
 Have you heard of the Onion Architecture principle in software design?**
- YES
+- YES
  
  
 MVC Pattern: (Yes/No) 
 Are you familiar with the Model-View-Controller (MVC) pattern for building web applications?
- YES
+- YES
  
  
 **Web API: (Yes/No) 
 Do you understand the concept of building RESTful APIs using ASP.NET Core Web API?**
- NO
+- NO
  
  
 
