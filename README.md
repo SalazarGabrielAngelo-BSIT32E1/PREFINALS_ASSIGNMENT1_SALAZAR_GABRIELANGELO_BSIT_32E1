@@ -55,7 +55,7 @@ Can you differentiate between traditional MVC applications and Web APIs? Briefly
 - NO, still stuck at learning
  
 
-Bottlenecks (Encountered): (Yes/No and Briefly Explain)
-Have you encountered any performance challenges with traditional MVC applications compared to Web APIs? If so, briefly describe the scenario(s). (e.g., Frequent page refreshes causing performance overhead, complex data exchange requiring a more lightweight approach)
+**Bottlenecks (Encountered): (Yes/No and Briefly Explain)
+Have you encountered any performance challenges with traditional MVC applications compared to Web APIs? If so, briefly describe the scenario(s). (e.g., Frequent page refreshes causing performance overhead, complex data exchange requiring a more lightweight approach)**
 - NO, still stuck at learning
 
