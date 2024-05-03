@@ -1,7 +1,7 @@
 ﻿using AuthServer.Core.Model;
 using System.Threading.Tasks;
 
-namespace AuthServer.Domain.Repositories
+namespace AuthServer.Core.Repositories
 {
     public interface IUserRepositories
     {

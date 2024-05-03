@@ -1,5 +1,5 @@
 ﻿using AuthServer.Core.Model;
-using AuthServer.Domain.Repositories;
+using AuthServer.Core.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
