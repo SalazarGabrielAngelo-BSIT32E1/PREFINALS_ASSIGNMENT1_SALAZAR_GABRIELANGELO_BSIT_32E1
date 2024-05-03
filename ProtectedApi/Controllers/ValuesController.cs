@@ -42,7 +42,7 @@ namespace ProtectedApi.Presentation.Controllers
 
         private string GenerateRandomInfo()
         {
-            string randomInfo = "Did you Vilgax is an intergalactic alien warlord and conqueror, a Chimera Sui Generis who serves as Ben's archenemy with an super duper thick neck even four arms can't choke him";
+            string randomInfo = "Did you know Vilgax is an intergalactic alien warlord and conqueror, a Chimera Sui Generis who serves as Ben's archenemy with a super duper thick neck even four arms can't choke him";
             return randomInfo;
         }
 

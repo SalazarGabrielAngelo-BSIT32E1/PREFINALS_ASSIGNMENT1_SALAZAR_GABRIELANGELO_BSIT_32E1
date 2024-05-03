@@ -1,8 +1,6 @@
-﻿using AuthServer.Core.Model;
-using AuthServer.Core.Repositories;
+﻿using AuthServer.Core.Repositories;
 using AuthServer.Core.Service;
 using System.Threading.Tasks;
-
 
 namespace AuthServer.Services
 {
@@ -15,6 +13,15 @@ namespace AuthServer.Services
             _userRepository = userRepository;
         }
 
+        public async Task<bool> RegisterAsync(string username, string password)
+        {
+            return true; 
+        }
+
+        public async Task<string> AuthenticateAsync(string username, string password)
+        {
+            return "token";
+        }
     }
 }
 

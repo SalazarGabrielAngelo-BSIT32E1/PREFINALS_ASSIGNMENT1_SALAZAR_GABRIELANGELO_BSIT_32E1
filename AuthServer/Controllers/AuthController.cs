@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AuthServer.Core.Service;
-using static AuthServer.Core.Service.IUserServices;
+using System.Threading.Tasks;
 
 namespace AuthServer.Presentation.Controllers
 {
@@ -8,19 +8,19 @@ namespace AuthServer.Presentation.Controllers
     [Route("[controller]")]
     public class AuthController : ControllerBase
     {
-        private readonly IUserService _userService;
+        private readonly IUserServices _userServices;
         private readonly IAuthService _authService;
 
-        public AuthController(IUserService userService, IAuthService authService)
+        public AuthController(IUserServices userServices, IAuthService authService)
         {
-            _userService = userService;
+            _userServices = userServices;
             _authService = authService;
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> RegisterAsync(string username, string password)
         {
-            if (await _userService.RegisterAsync(username, password))
+            if (await _userServices.RegisterAsync(username, password))
                 return Ok();
 
             return BadRequest();
@@ -29,7 +29,7 @@ namespace AuthServer.Presentation.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> LoginAsync(string username, string password)
         {
-            var token = await _userService.AuthenticateAsync(username, password);
+            var token = await _userServices.AuthenticateAsync(username, password);
             if (token != null)
                 return Ok(new { Token = token });
 
@@ -37,4 +37,5 @@ namespace AuthServer.Presentation.Controllers
         }
     }
 }
+
 
