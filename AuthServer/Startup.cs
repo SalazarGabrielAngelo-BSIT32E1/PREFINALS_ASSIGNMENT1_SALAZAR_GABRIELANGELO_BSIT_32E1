@@ -1,13 +1,13 @@
-﻿using AuthServer.Core.Service;
-using AuthServer.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using static AuthServer.Core.Service.IUserServices;
+using AuthServer.Core.Service;
+using AuthServer.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace YourNamespace
 {
@@ -19,10 +19,11 @@ namespace YourNamespace
         {
             Configuration = configuration;
         }
- 
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+
             services.AddScoped<IUserServices, UserServices>();
             services.AddScoped<IAuthService, AuthService>();
 
@@ -47,6 +48,7 @@ namespace YourNamespace
                 };
             });
 
+            services.AddAuthorization();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -65,6 +67,11 @@ namespace YourNamespace
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
