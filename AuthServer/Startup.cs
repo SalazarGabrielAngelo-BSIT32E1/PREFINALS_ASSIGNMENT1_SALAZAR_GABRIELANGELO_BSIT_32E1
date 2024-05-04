@@ -22,10 +22,10 @@ namespace YourNamespace
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            //services.AddControllers();
 
-            services.AddScoped<IUserServices, UserServices>();
-            services.AddScoped<IAuthService, AuthService>();
+            //services.AddScoped<IUserServices, UserServices>();
+            //services.AddScoped<IAuthService, AuthService>();
 
             var jwtSettings = Configuration.GetSection("JwtSettings");
             var key = Encoding.ASCII.GetBytes(jwtSettings["Key"]);

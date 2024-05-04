@@ -1,4 +1,5 @@
 ﻿using AuthServer.Core.Model;
+
 using System.Threading.Tasks;
 
 namespace AuthServer.Core.Repositories

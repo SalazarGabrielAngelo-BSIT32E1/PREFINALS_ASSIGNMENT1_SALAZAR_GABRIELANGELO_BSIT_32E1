@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AuthServer.Repositories
+namespace AuthServer.Core.Repositories
 {
     public class UserRepositories : IUserRepositories
     {
